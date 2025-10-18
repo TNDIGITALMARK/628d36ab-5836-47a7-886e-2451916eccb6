@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "HolisticAI Health - Your Holistic Path to Wellness",
+  description: "Personalized wellness guidance through AI-powered holistic health approach",
 };
 
 export default function RootLayout({

@@ -52,18 +52,11 @@ export default function Assessment() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
-        <div className="container mx-auto px-6 py-4">
+      <header className="border-b border-border">
+        <div className="container mx-auto px-8 py-6">
           <nav className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/generated/logo.png"
-                alt="HolisticAI"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <span className="text-xl font-semibold text-foreground">HolisticAI</span>
+            <Link href="/" className="text-xl font-medium text-foreground tracking-tight">
+              HolisticAI
             </Link>
             <div className="text-sm text-muted-foreground">
               Step {step} of {totalSteps}

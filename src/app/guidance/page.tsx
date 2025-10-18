@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // Mock user data based on assessment
 const mockUserData = {
@@ -125,19 +127,7 @@ function GuidanceContent() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-8 py-6">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-medium text-foreground tracking-tight">
-              HolisticAI
-            </Link>
-            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Back to Home
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section with User Info */}
       <section className="bg-secondary border-b border-border">
@@ -166,7 +156,7 @@ function GuidanceContent() {
             </div>
             <div className="h-3 bg-muted rounded-full overflow-hidden">
               <div
-                className="h-full bg-primary rounded-full transition-all"
+                className="h-full bg-green-500 rounded-full transition-all"
                 style={{ width: `${(mockUserData.wellnessScore / mockUserData.weeklyTarget) * 100}%` }}
               />
             </div>
@@ -331,6 +321,8 @@ function GuidanceContent() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

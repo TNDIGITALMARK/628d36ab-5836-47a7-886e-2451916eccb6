@@ -1,24 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Navigation - Minimal Design */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-8 py-6">
-          <nav className="flex items-center justify-between">
-            <span className="text-xl font-medium text-foreground tracking-tight">HolisticAI</span>
-            <div className="flex items-center gap-8 text-sm">
-              <Link href="/" className="text-foreground font-medium">Home</Link>
-              <Link href="/assessment" className="text-muted-foreground hover:text-foreground transition-colors">Assessment</Link>
-              <Link href="/guidance" className="text-muted-foreground hover:text-foreground transition-colors">Guidance</Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section - Minimal Design with Green Imagery */}
       <section className="relative overflow-hidden">
@@ -186,19 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - Minimal */}
-      <footer className="border-t border-border mt-24">
-        <div className="container mx-auto px-8 py-12">
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-muted-foreground">© 2025 HolisticAI</span>
-            <div className="flex gap-8 text-sm text-muted-foreground">
-              <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
-              <Link href="#" className="hover:text-foreground transition-colors">Terms</Link>
-              <Link href="#" className="hover:text-foreground transition-colors">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
